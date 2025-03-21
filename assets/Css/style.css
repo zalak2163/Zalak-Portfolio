@@ -1,0 +1,639 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f7fc;
+  padding-top: 60px; /* Space for fixed header */
+}
+/* Add this to your style.css */
+html {
+  scroll-behavior: smooth; /* Smooth scrolling for all anchor links */
+}
+
+/* To avoid content being hidden behind the fixed header */
+section {
+  padding-top: 80px; /* Adjust this value to the height of your fixed header */
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  background: #2c3e50; /* Navy Blue */
+  color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 100;
+}
+
+header .logo h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #1abc9c; /* Light Green */
+}
+/* Hero Section */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 20px; /* Adjusted padding */
+  background-color: #ffffff;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  border-radius: 10px;
+  margin: 40px; /* Added margin */
+}
+
+.hero .hero-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero .left {
+  flex: 1;
+  text-align: center; /* Center text */
+  padding-right: 30px; /* Increased padding-right for more space */
+}
+
+.hero .left h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #2c3e50;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#web-dev-text {
+  font-size: 2rem;
+  color: #16a085;
+  font-weight: 600;
+  margin-top: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* Social Media Links */
+.social-links {
+  margin-top: 20px;
+}
+
+.social-icon {
+  font-size: 2rem;
+  color: #16a085;
+  margin: 0 15px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icon:hover {
+  color: #2c3e50;
+  transform: translateY(-5px);
+}
+
+/* Right Section (Image) */
+.hero .right {
+  flex: 1;
+  text-align: center;
+  margin-left: 30px; /* Increased margin-left to add space between text and image */
+  position: relative;
+}
+
+.hero .right img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .right img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.3);
+}
+
+/* About Me Section */
+.about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #333;
+  text-transform: uppercase;
+}
+
+.about p {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 1.8;
+  text-align: center;
+  padding: 20px; /* Added padding to create some breathing room */
+  font-style: italic; /* Added italic styling */
+  letter-spacing: 0.5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+  }
+
+  .hero .left {
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .hero .right img {
+    width: 250px;
+    height: 250px;
+  }
+
+  .about {
+    padding: 40px 20px;
+  }
+
+  .about p {
+    font-size: 1rem;
+    padding: 15px;
+  }
+}
+
+/* Skills Section */
+.skills {
+  background-color: #f5f7fa; /* Light background for a clean look */
+  padding: 80px 20px;
+  color: #333; /* Dark text color for readability */
+}
+
+/* Skills Heading */
+.skills h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #2c3e50; /* Darker color for the heading */
+  text-transform: uppercase; /* Gives a bold, professional look */
+}
+
+/* Container for Skill Set */
+.skill-set {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual Skill Cards */
+.skill {
+  background: #ffffff; /* White background for the cards */
+  padding: 35px;
+  border-radius: 15px; /* Rounded corners for a soft effect */
+  text-align: center;
+  width: 30%; /* Each card takes up 30% width */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.skill:hover {
+  transform: translateY(-10px); /* Lift the card on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+/* Skill Icon */
+.skill i {
+  font-size: 3.5rem;
+  color: #1abc9c; /* Teal color for icons */
+  margin-bottom: 20px;
+  transition: color 0.3s ease; /* Icon color transition */
+}
+
+.skill:hover i {
+  color: #16a085; /* Darker teal color on hover */
+}
+
+/* Skill Title */
+.skill h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #34495e; /* Darker color for the title */
+}
+
+/* List of Skills */
+.skill ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.skill ul li {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #7f8c8d; /* Lighter color for list items */
+  font-weight: 400;
+}
+
+.skill ul li::before {
+  content: "\2022"; /* Bullet points before each skill */
+  color: #1abc9c; /* Color of the bullet points */
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .skill-set {
+    flex-direction: column; /* Stack the cards vertically on small screens */
+    align-items: center; /* Center the cards */
+  }
+
+  .skill {
+    width: 80%; /* Make each card take up more width on mobile */
+    margin-bottom: 20px;
+  }
+
+  .skills h2 {
+    font-size: 2rem; /* Smaller heading size for mobile */
+    margin-bottom: 30px;
+  }
+}
+/* Projects Section */
+.projects {
+  background-color: #f9f9f9; /* Soft light gray background for the section */
+  padding: 80px 20px;
+  color: #333;
+}
+
+/* Heading */
+.projects h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #2c3e50; /* Dark color for contrast */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Container for Project Cards */
+.project-cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Individual Project Card */
+.card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer shadow */
+  width: 23%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+  position: relative; /* For positioning the icon */
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Card Icon */
+.card i {
+  font-size: 4rem;
+  color: #1abc9c; /* Icon color */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+/* Card Title */
+.card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #2c3e50; /* Dark color for contrast */
+  transition: color 0.3s ease;
+}
+
+/* Card description */
+.card p {
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Lighter gray for description */
+  margin-bottom: 20px;
+}
+
+/* Card Links */
+.card a {
+  color: #1abc9c; /* Teal color for the links */
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 2px solid #1abc9c;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effects on links */
+.card a:hover {
+  background-color: #1abc9c;
+  color: #ffffff; /* White text on hover */
+  text-decoration: none;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 25px;
+  }
+
+  .projects h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+  }
+}
+/* Experience Section */
+.experience {
+  background-color: #f1f1f1; /* Light gray background for the section */
+  padding: 80px 20px;
+  color: #333;
+}
+
+/* Heading */
+.experience h2 {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Experience Card */
+.experience-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Softer shadow */
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for experience card */
+.experience-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+}
+
+/* Header section inside experience card */
+.experience-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.experience-header i {
+  font-size: 3rem;
+  color: #1abc9c; /* Icon color */
+  margin-right: 15px;
+}
+
+/* Job Title */
+.experience-card h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+/* Job Description */
+.experience-card ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.experience-card ul li {
+  font-size: 1.1rem;
+  color: #7f8c8d; /* Lighter gray for description */
+  margin-bottom: 12px;
+}
+
+/* Tools Used */
+.experience-card p {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .experience-card {
+    padding: 30px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .experience-card h3 {
+    font-size: 1.6rem;
+  }
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f5f5f5; /* Light gray background for contrast */
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.contact h2 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #2c3e50;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Input focus effect */
+.contact form input:focus,
+.contact form textarea:focus {
+  border-color: #1abc9c;
+  outline: none;
+}
+
+.contact form textarea {
+  height: 150px;
+  resize: none;
+}
+
+/* Submit Button */
+.contact form button {
+  padding: 15px 30px;
+  background-color: #1abc9c;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Button Hover Effect */
+.contact form button:hover {
+  background-color: #16a085;
+  transform: translateY(-3px);
+}
+
+.contact form button:active {
+  transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .contact form {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .contact h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero .left {
+    margin-bottom: 20px;
+  }
+
+  .skill-set {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .project-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 90%;
+  }
+
+  .cv-button {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
